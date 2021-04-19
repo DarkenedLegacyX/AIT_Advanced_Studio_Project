@@ -3,15 +3,12 @@ import '../../App.css';
 import Cards from '../Cards';
 import HeroSection from '../HeroSection';
 import Footer from '../Footer';
-import Navbar from '../Navbar';
 
-function SignUp() {
+function AppHome() {
   return (
   <>
-  <Navbar />
-  <h1 className='sign-up'>LIKE & SUBSCRIBE</h1>
-  <Footer />
+  <h1 className='app-home'>YOU ARE HERE</h1>
   </>
   );
 }
-export default SignUp;
+export default AppHome;
