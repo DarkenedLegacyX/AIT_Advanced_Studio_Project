@@ -12,9 +12,9 @@ function AppHome() {
     <>
       <NavbarLoggedIn />
 
-      <Link to="/milk"><button> MILK </button></Link>
-      <Link to="/coffee"><button> COFFEE </button></Link>
-      <Link to="/cookie"><button> COOKIE </button></ Link>
+      <Link to="/milk"><button class="button"> MILK </button></Link>
+      <Link to="/coffee"><button class="button"> COFFEE </button></Link>
+      <Link to="/cookie"><button class="button"> COOKIE </button></ Link>
 
     </>
   );
