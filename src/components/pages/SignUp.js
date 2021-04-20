@@ -9,7 +9,7 @@ function SignUp() {
   return (
   <>
   <Navbar />
-  <h1 className='sign-up'>LIKE & SUBSCRIBE</h1>
+  <h1 className='sign-up'>COMING SOON</h1>
   <Footer />
   </>
   );

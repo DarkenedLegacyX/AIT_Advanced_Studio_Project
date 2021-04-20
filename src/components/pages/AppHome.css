@@ -1,0 +1,15 @@
+.AppHome input, button{
+    font-size: 150px;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, #6E5EFE 50%, #6E5EFE 50%, #493FFC);
+    background-size: 200%;
+    background-position: 0%;
+    transition: 0.4s;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 30px;
+}

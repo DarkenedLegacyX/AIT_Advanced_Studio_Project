@@ -9,6 +9,9 @@
 .services,
 .login
 .app-home
+.milk
+.coffee
+.cookie
 
 .sign-up {
   display: flex;
@@ -47,6 +50,33 @@
 
 .app-home {
   background-image: url('/images/img-9.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.milk {
+  background-image: url('/images/img-1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.coffee {
+  background-image: url('/images/img-1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.cookie {
+  background-image: url('/images/img-1.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

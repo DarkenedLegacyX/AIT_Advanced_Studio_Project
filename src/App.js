@@ -7,6 +7,10 @@ import Services from './components/pages/Services';
 import Login from './components/pages/Login';
 import SignUp from './components/pages/SignUp';
 import AppHome from './components/pages/AppHome';
+import Milk from './components/pages/IngredientPage/Milk';
+import Coffee from './components/pages/IngredientPage/Coffee';
+import Cookie from './components/pages/IngredientPage/Cookie';
+
 
 function App() {
   return (
@@ -18,6 +22,9 @@ function App() {
           <Route path='/login' component={Login} />
           <Route path='/sign-up' component={SignUp} />
           <Route path='/app-home' component={AppHome} />
+          <Route path='/milk' component={Milk} />
+          <Route path='/coffee' component={Coffee} />
+          <Route path='/cookie' component={Cookie} />
         </Switch>
       </Router>
     </>
