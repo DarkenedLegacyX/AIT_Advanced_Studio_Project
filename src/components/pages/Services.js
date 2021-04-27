@@ -3,7 +3,8 @@ import '../../App.css';
 import Cards from '../Cards';
 import HeroSection from '../HeroSection';
 import Footer from '../Footer';
-import Navbar from '../Navbar';
+import NavbarLoggedIn from '../NavbarLoggedIn';
+
 
 export default function Services() {
   function addProduct() {
@@ -33,9 +34,9 @@ export default function Services() {
 
 return (
     <div className='App'>
-        <Navbar />
+        <NavbarLoggedIn />
         <button onClick={addProduct.bind(this)}>Add Product</button>
-        <Footer/>
+        
     </div>
 );
 

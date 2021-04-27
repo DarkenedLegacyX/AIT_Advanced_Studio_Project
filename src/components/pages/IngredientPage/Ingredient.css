@@ -1,0 +1,15 @@
+.ingredinfo{
+    padding: 4rem;
+    background: #fff;
+  }
+
+  .ingredinfo h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+  
+  .ingredinfo p
+  {
+    font-size: 20px;
+    text-align: center;
+  }
