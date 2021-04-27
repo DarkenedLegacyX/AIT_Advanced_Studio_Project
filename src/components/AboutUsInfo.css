@@ -1,0 +1,15 @@
+.info {
+    padding: 4rem;
+    background: #fff;
+  }
+
+.info h1 {
+    font-size: 75px;
+    text-align: center;
+  }
+  
+  .info p
+  {
+      font-size: 20px;
+    text-align: center;
+  }
