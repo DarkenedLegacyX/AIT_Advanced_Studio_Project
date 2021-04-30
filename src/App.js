@@ -11,6 +11,8 @@ import AppHome from './components/pages/AppHome';
 import Milk from './components/pages/IngredientPage/Milk';
 import Coffee from './components/pages/IngredientPage/Coffee';
 import Cookie from './components/pages/IngredientPage/Cookie';
+import Cakes from './components/pages/IngredientPage/Cakes';
+import Pies from './components/pages/IngredientPage/Pies';
 
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
           <Route path='/coffee' component={Coffee} />
           <Route path='/cookie' component={Cookie} />
           <Route path='/about-us' component={AboutUs} />
+          <Route path='/cake' component={Cakes} />
+          <Route path='/pies' component={Pies} />
         </Switch>
       </Router>
     </>
