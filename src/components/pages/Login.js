@@ -13,6 +13,7 @@ function Login() {
     email: "AitAdmin@StockBot.com",
     password: "1"
     //hi test
+    //hi
   }
   const [user, setUser] = useState({ name: "", email: "" });
   const [error, setError] = useState("");
@@ -47,7 +48,7 @@ function Login() {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div className="Login">
 
         {(user.email != "") ? (

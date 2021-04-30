@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../../App.css';
 import NavbarLoggedIn from '../../NavbarLoggedIn';
 import './Ingredient.css'
@@ -50,10 +50,53 @@ const data = [
 ];
 
 function Milk() {
+
+
+  //const [currentTime, setCurrentTime] = useState(0);
+  const [predictedValue, setPredictedValue] = useState(0);
+
+
+  // useEffect(() => {
+  //   fetch('http://localhost:5000/time').then(res => res.json()).then(data => {
+  //     setCurrentTime(data.time);
+  //   });
+  // }, []);
+
+  useEffect(() => {
+    addMilk();
+  }, []);
+
+
+  function addMilk() {
+    var coffee = prompt("number of cookies sold");
+
+
+    let data = {
+      'Reference': 'coffee',
+      'Predict': 'cookies',
+      'RefSold': coffee
+    };
+    var request = new Request('http://localhost:5000/linearMonday', {
+      method: 'POST',
+      headers: new Headers({ 'Content-Type': 'application/json' }),
+      body: JSON.stringify(data)
+    });
+    //htmlrequest
+    fetch(request).then(function (response) {
+      response.json().then(function (data) {
+        console.log('helo');
+        console.log(data.completeAdd);
+        setPredictedValue(data.completeAdd);
+
+      })
+    })
+  };
+
   return (
     <>
       <NavbarLoggedIn />
       <h1>Milkity Milk Milk</h1>
+      <h1>Predicted Value: {predictedValue}</h1>
       <ResponsiveContainer width="99%" aspect={3}>
         <LineChart
           width={400}
@@ -72,6 +115,10 @@ function Milk() {
         <h1>In Stock</h1>
         <p>Current Amount: 30</p>
         <p>Amount to order next time: 10</p>
+
+      </div>
+      <div>
+
       </div>
     </>
   );
