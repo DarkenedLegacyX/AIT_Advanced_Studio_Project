@@ -12,27 +12,79 @@ function Login() {
   const adminUser = {
     email: "AitAdmin@StockBot.com",
     password: "1"
-    //hi test
-    //hi
   }
+
   const [user, setUser] = useState({ name: "", email: "" });
   const [error, setError] = useState("");
+  
+  // async function addMilk() {
+  //   var Day = prompt("Enter your day of analysis");
 
-  const Login = details => {
-    console.log(details);
 
-    if (details.email == adminUser.email && details.password == adminUser.password) {
+  //   let data = {
+  //     'Day': Day
+  //   };
+  //   var request = new Request('http://localhost:5000/validation', {
+  //     method: 'POST',
+  //     headers: new Headers({ 'Content-Type': 'application/json' }),
+  //     body: JSON.stringify(data)
+  //   });
+  //   //htmlrequest
+  //  await fetch(request).then(function (response) {
+  //     response.json().then(function (data) {
+  //       console.log('helo');
+  //       console.log(data.completeAdd);
+  //       setPredictedValue(data.completeAdd);
+  //       setState(data.cookieList);
 
-      setUser({
-        name: details.name,
-        email: details.email
-      });
+  //       console.log(data.cookieList);
+  //       console.log(prevState);
+  //     })
+  //   })
+  // };
 
-    }
-    else {
-      console.log("Details do not match.");
-      setError("Details do not match.");
-    }
+
+  const Login = details =>  {
+  console.log(details);
+
+    let data = {
+      'useremail': details.email,
+      'password': details.password
+    };
+    var request = new Request('http://localhost:5000/validation', {
+      method: 'POST',
+      headers: new Headers({ 'Content-Type': 'application/json' }),
+      body: JSON.stringify(data)
+    });
+
+    //htmlrequest
+    fetch(request).then(function (response) {
+      response.json().then(function (data) {
+          if(data.acc == "NULL"){
+            console.log("Details do not match.");
+             setError("Details do not match.");
+          }else{
+            setUser({
+              name: details.name,
+              email: details.email
+            });
+          }
+      })
+    })
+
+
+    // if (details.email == adminUser.email && details.password == adminUser.password) {
+
+    //   setUser({
+    //     name: details.name,
+    //     email: details.email
+    //   });
+
+    // }
+    // else {
+    //   console.log("Details do not match.");
+    //   setError("Details do not match.");
+    // }
 
   }
 

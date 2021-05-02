@@ -7,16 +7,21 @@ import NavbarLoggedIn from '../NavbarLoggedIn';
 
 
 export default function Services() {
+
   function addProduct() {
-    var name = prompt("enter name");
-    var type = prompt("enter type");
-    var price = prompt("enter price");
-    var quantity = prompt("enter quantity");
+    var coffee = prompt("enter coffee quantity");
+    var day = prompt("enter day today in numbers(1-7)");
+    var cakes = prompt("enter cakes quantity");
+    var pies = prompt("enter pies");
+    var cookies = prompt("enter cookies");
+    var smoothies = prompt("enter smoothies");
     let data = {
-        product_name: name,
-        product_type: type,
-        product_price: price,
-        product_quantity: quantity
+        Coffee: coffee,
+        Day: day,
+        Cakes: cakes,
+        Pies: pies,
+        Cookies: cookies,
+        Smoothies: smoothies
     };
     var request = new Request('http://localhost:3001/api/new-product', {
         method: 'POST',
@@ -32,11 +37,15 @@ export default function Services() {
     })
 };
 
+function logisticRegressionFunc(){
+
+
+}
+
 return (
     <div className='App'>
         <NavbarLoggedIn />
-        <button onClick={addProduct.bind(this)}>Add Product</button>
-        
+        <button class="button" onClick={addProduct.bind(this)}> Update Daily Sales </button>
     </div>
 );
 

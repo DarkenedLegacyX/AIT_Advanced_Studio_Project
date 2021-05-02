@@ -11,7 +11,7 @@ function Cards() {
           <ul className='cards__items'>
             <CardItem
               src='images/ReduceWaste.jpg'
-              text='Keep track of your products and know when they will expire'
+              text='Buy according to prediction and waste less products'
               label='Reduce Waste'
               //path='/services'
             />
@@ -25,8 +25,8 @@ function Cards() {
           <ul className='cards__items'>
             <CardItem
               src='images/Ordering.jpg'
-              text='Be able to place orders in the system'
-              label='Ordering System'
+              text='Add daily sales data to improve prediction accuracy through model training'
+              label='Prediction Algorithm'
               //path='/services'
             />
             <CardItem

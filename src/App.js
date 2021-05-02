@@ -13,6 +13,7 @@ import Coffee from './components/pages/IngredientPage/Coffee';
 import Cookie from './components/pages/IngredientPage/Cookie';
 import Cakes from './components/pages/IngredientPage/Cakes';
 import Pies from './components/pages/IngredientPage/Pies';
+import Predction from './components/pages/IngredientPage/Prediction';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path='/about-us' component={AboutUs} />
           <Route path='/cake' component={Cakes} />
           <Route path='/pies' component={Pies} />
+          <Route path='/prediction' component={Predction} />
         </Switch>
       </Router>
     </>

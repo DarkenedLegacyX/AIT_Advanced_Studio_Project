@@ -11,12 +11,13 @@ function AppHome() {
   return (
     <>
       <NavbarLoggedIn />
-
-      <Link to="/milk"><button class="button"> MILK </button></Link>
+      <Link to="/milk"><button class="button"> SMOOTHIE </button></Link>
       <Link to="/coffee"><button class="button"> COFFEE </button></Link>
       <Link to="/cookie"><button class="button"> COOKIE </button></ Link>
       <Link to="/cake"><button class="button"> CAKE </button></ Link>
       <Link to="/pies"><button class="button"> PIES </button></ Link>
+      <Link to="/prediction"><button class="button"> Prediction </button></Link>
+
     </>
   );
 }
